@@ -30,7 +30,7 @@ namespace WheelsOfFortune
             return origin.Contains(guess);
         }
 
-        public string GuessResult(char guess, string origin, string dashes)
+        public string DashesUpdate(char guess, string origin, string dashes)
         {
             char[] dashesChars = dashes.ToCharArray();
             for (int i = 0; i < origin.Length; i++)

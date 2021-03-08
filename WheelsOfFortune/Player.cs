@@ -8,6 +8,11 @@ namespace WheelsOfFortune
     {
         public string Name { get; set; }
 
+        public Player(string name)
+        {
+            Name = name;
+        }
+
         public char GetGuessLetter()
         {
             Console.WriteLine("Guess letter?");
