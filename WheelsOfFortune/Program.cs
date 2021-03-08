@@ -19,7 +19,7 @@ namespace WheelsOfFortune
             Console.WriteLine(dashes);
 
             int numberOfGuessing = 0;
-            while (!play.StopGame(dashes))
+            while (play.StopGame(dashes))
             {
                 char guess = player.GetGuessLetter();
                 if (play.GuessResult(guess, origin))

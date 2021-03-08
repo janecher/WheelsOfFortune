@@ -40,7 +40,7 @@ namespace WheelsOfFortune
                     dashesChars[i] = guess;
                 }
             }
-            return dashesChars.ToString();
+            return new string(dashesChars);
         }
 
         public bool StopGame(string dashes)
