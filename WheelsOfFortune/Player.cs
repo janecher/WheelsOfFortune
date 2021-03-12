@@ -6,40 +6,17 @@ namespace WheelsOfFortune
 {
     public class Player
     {
-        public string Name { get; set; }
+        public string playerName;
 
         public Player(string name)
         {
-            Name = name;
+            playerName = name;
         }
 
-        public char GetGuessLetter()
+        public string Guess()
         {
-            Console.WriteLine("Guess letter?");
-            string letter = Console.ReadLine();
-            if (!Validation(letter))
-            {
-                return GetGuessLetter();
-            }
-            else
-            {
-                return letter.ToLower()[0];
-            }
-        }
-
-        private bool Validation(string input)
-        {
-            if (input.Length != 1)
-            {
-                Console.WriteLine("Incorrect input. Only 1 letter allow.");
-                return false;
-            }
-            if (!char.IsLetter(input[0]))
-            {
-                Console.WriteLine("Incorrect input. Only letters allow.");
-                return false;
-            }
-            return true;
+            Console.WriteLine("Guess a letter or word:");
+            return Console.ReadLine();
         }
     }
 }
